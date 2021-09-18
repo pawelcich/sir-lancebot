@@ -3,7 +3,7 @@ import enum
 import logging
 from datetime import datetime
 from os import environ
-from typing import Dict, NamedTuple
+from typing import NamedTuple
 
 __all__ = (
     "AdventOfCode",
@@ -56,7 +56,7 @@ class AdventOfCodeLeaderboard:
         return self._session
 
 
-def _parse_aoc_leaderboard_env() -> Dict[str, AdventOfCodeLeaderboard]:
+def _parse_aoc_leaderboard_env() -> dict[str, AdventOfCodeLeaderboard]:
     """
     Parse the environment variable containing leaderboard information.
 
@@ -113,7 +113,6 @@ class Channels(NamedTuple):
     off_topic_1 = 463035241142026251
     off_topic_2 = 463035268514185226
     community_bot_commands = int(environ.get("CHANNEL_COMMUNITY_BOT_COMMANDS", 607247579608121354))
-    hacktoberfest_2020 = 760857070781071431
     voice_chat_0 = 412357430186344448
     voice_chat_1 = 799647045886541885
     staff_voice = 541638762007101470
@@ -127,6 +126,7 @@ class Categories(NamedTuple):
     media = 799054581991997460
     staff = 364918151625965579
 
+codejam_categories_name = "Code Jam"  # Name of the codejam team categories
 
 class Client(NamedTuple):
     name = "Sir Lancebot"
@@ -134,7 +134,7 @@ class Client(NamedTuple):
     prefix = environ.get("PREFIX", ".")
     token = environ.get("BOT_TOKEN")
     sentry_dsn = environ.get("BOT_SENTRY_DSN")
-    debug = environ.get("BOT_DEBUG", "").lower() == "true"
+    debug = environ.get("BOT_DEBUG", "true").lower() == "true"
     github_bot_repo = "https://github.com/python-discord/sir-lancebot"
     # Override seasonal locks: 1 (January) to 12 (December)
     month_override = int(environ["MONTH_OVERRIDE"]) if "MONTH_OVERRIDE" in environ else None
@@ -226,6 +226,10 @@ class Emojis:
     status_dnd = "<:status_dnd:470326272082313216>"
     status_offline = "<:status_offline:470326266537705472>"
 
+
+    stackoverflow_tag = "<:stack_tag:870926975307501570>"
+    stackoverflow_views = "<:stack_eye:870926992692879371>"
+
     # Reddit emojis
     reddit = "<:reddit:676030265734332427>"
     reddit_post_text = "<:reddit_post_text:676030265910493204>"
@@ -234,6 +238,9 @@ class Emojis:
     reddit_upvote = "<:reddit_upvote:755845219890757644>"
     reddit_comments = "<:reddit_comments:755845255001014384>"
     reddit_users = "<:reddit_users:755845303822974997>"
+
+    lemon_hyperpleased = "<:lemon_hyperpleased:754441879822663811>"
+    lemon_pensive = "<:lemon_pensive:754441880246419486>"
 
 
 class Icons:
