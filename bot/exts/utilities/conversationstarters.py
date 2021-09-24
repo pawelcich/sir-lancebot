@@ -36,6 +36,7 @@ class ConvoStarters(commands.Cog):
     """General conversation topics."""
 
     @commands.command()
+    @commands.cooldown(1, 300, commands.BucketType.channel)
     @whitelist_override(channels=ALL_ALLOWED_CHANNELS)
     async def topic(self, ctx: commands.Context) -> None:
         """
