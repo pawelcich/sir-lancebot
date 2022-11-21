@@ -101,7 +101,7 @@ python-versions = ">=3.5"
 dev = ["cloudpickle", "coverage[toml] (>=5.0.2)", "furo", "hypothesis", "mypy (>=0.900,!=0.940)", "pre-commit", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "sphinx", "sphinx-notfound-page", "zope.interface"]
 docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
 tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
+tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "beautifulsoup4"
@@ -175,7 +175,7 @@ optional = false
 python-versions = ">=3.6.0"
 
 [package.extras]
-unicode_backport = ["unicodedata2"]
+unicode-backport = ["unicodedata2"]
 
 [[package]]
 name = "colorama"
@@ -341,18 +341,18 @@ pydocstyle = ">=2.1"
 
 [[package]]
 name = "flake8-isort"
-version = "4.2.0"
+version = "5.0.3"
 description = "flake8 plugin that integrates isort ."
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 
 [package.dependencies]
-flake8 = ">=3.2.1,<6"
+flake8 = "*"
 isort = ">=4.3.5,<6"
 
 [package.extras]
-test = ["pytest-cov"]
+test = ["pytest"]
 
 [[package]]
 name = "flake8-string-format"
@@ -435,9 +435,9 @@ python-versions = ">=3.6.1,<4.0"
 
 [package.extras]
 colors = ["colorama (>=0.4.3,<0.5.0)"]
-pipfile_deprecated_finder = ["pipreqs", "requirementslib"]
+pipfile-deprecated-finder = ["pipreqs", "requirementslib"]
 plugins = ["setuptools"]
-requirements_deprecated_finder = ["pip-api", "pipreqs"]
+requirements-deprecated-finder = ["pip-api", "pipreqs"]
 
 [[package]]
 name = "jarowinkler"
@@ -766,7 +766,7 @@ falcon = ["falcon (>=1.4)"]
 fastapi = ["fastapi (>=0.79.0)"]
 flask = ["blinker (>=1.1)", "flask (>=0.11)"]
 httpx = ["httpx (>=0.16.0)"]
-pure_eval = ["asttokens", "executing", "pure-eval"]
+pure-eval = ["asttokens", "executing", "pure-eval"]
 pyspark = ["pyspark (>=2.4.4)"]
 quart = ["blinker (>=1.1)", "quart (>=0.16.1)"]
 rq = ["rq (>=0.6)"]
@@ -919,7 +919,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.10.*"
-content-hash = "232ec6b3a43b4c2f160ea6095bc7a842e987f1607fe89c33524ebbdbf5bb172e"
+content-hash = "9c847f59b0f7dd1db6ac1fac94402ee1c481deada2c70de89f002941204c1e53"
 
 [metadata.files]
 aiodns = [
@@ -1159,8 +1159,8 @@ flake8-docstrings = [
     {file = "flake8_docstrings-1.6.0-py2.py3-none-any.whl", hash = "sha256:99cac583d6c7e32dd28bbfbef120a7c0d1b6dde4adb5a9fd441c4227a6534bde"},
 ]
 flake8-isort = [
-    {file = "flake8-isort-4.2.0.tar.gz", hash = "sha256:26571500cd54976bbc0cf1006ffbcd1a68dd102f816b7a1051b219616ba9fee0"},
-    {file = "flake8_isort-4.2.0-py3-none-any.whl", hash = "sha256:5b87630fb3719bf4c1833fd11e0d9534f43efdeba524863e15d8f14a7ef6adbf"},
+    {file = "flake8-isort-5.0.3.tar.gz", hash = "sha256:0951398c343c67f4933407adbbfb495d4df7c038650c5d05753a006efcfeb390"},
+    {file = "flake8_isort-5.0.3-py3-none-any.whl", hash = "sha256:8c4ab431d87780d0c8336e9614e50ef11201bc848ef64ca017532dec39d4bf49"},
 ]
 flake8-string-format = [
     {file = "flake8-string-format-0.3.0.tar.gz", hash = "sha256:65f3da786a1461ef77fca3780b314edb2853c377f2e35069723348c8917deaa2"},
